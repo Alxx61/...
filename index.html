@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTeen - Moda Sostenible</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo empresa ecoteen.png" alt="EcoTeen Logo" class="logo-img">
+                <div class="logo">EcoTeen</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#new">Nova Roba</a></li>
+                <li><a href="#unique">Peces Úniques</a></li>
+                <li><a href="#secondhand">Segona Mà</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Moda sostenible per un millor demà</h1>
+            <p>Descobreix la nostra col·lecció de roba ecològica</p>
+        </section>
+
+        <section id="new" class="product-section">
+            <h2>Nova roba de marques ètiques</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Samarreta ajustada de cotó de màniga curta.png" alt="Samarreta ajustada de cotó de màniga curta" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Samarreta ajustada de cotó de màniga curta</h3>
+                        <p class="product-price">€8.00</p>
+                        <button class="add-to-cart" data-id="n1" data-name="Samarreta ajustada de cotó de màniga curta" data-price="8" data-category="new">Afegir a la Cistella</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Camisa de lli de màniga curta d'home.png" alt="Camisa de lli de màniga curta" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Camisa de lli de màniga curta</h3>
+                        <p class="product-price">€16.00</p>
+                        <button class="add-to-cart" data-id="n2" data-name="Camisa de lli de màniga curta" data-price="16" data-category="new">Afegir a la Cistella</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Pantaló de lli d'home.png" alt="Pantaló de lli d'home" class="product-image fit-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Pantaló de lli d'home</h3>
+                        <p class="product-price">€19.00</p>
+                        <button class="add-to-cart" data-id="n3" data-name="Pantaló de lli d'home" data-price="19" data-category="new">Afegir a la Cistella</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Samarreta de tirants blonda de dona.png" alt="Samarreta de tirants blonda de dona" class="product-image fit-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Samarreta de tirants blonda de dona</h3>
+                        <p class="product-price">€7.00</p>
+                        <button class="add-to-cart" data-id="n4" data-name="Samarreta de tirants blonda de dona" data-price="7" data-category="new">Afegir a la Cistella</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="unique" class="product-section">
+            <h2>Peces úniques artesanals</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Top de crochet de dona fet artesanal al taller de la botiga.png" alt="Top de crochet de dona fet artesanal al taller" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Top de crochet de dona fet artesanal al taller</h3>
+                        <p class="product-price">€13.00</p>
+                        <button class="add-to-cart" data-id="u1" data-name="Top de crochet de dona fet artesanal al taller" data-price="13" data-category="unique">Afegir a la Cistella</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Armilla feta artesanalment d'home.png" alt="Armilla d'home" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Armilla d'home</h3>
+                        <p class="product-price">€19.00</p>
+                        <button class="add-to-cart" data-id="u2" data-name="Armilla d'home" data-price="19" data-category="unique">Afegir a la Cistella</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="secondhand" class="product-section">
+            <h2>Col·lecció de segona mà</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Blusa lila mango.png" alt="Blusa lila mango" class="product-image fit-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Blusa lila mango</h3>
+                        <p class="product-price">€6.00</p>
+                        <button class="add-to-cart" data-id="s1" data-name="Blusa lila mango" data-price="6" data-category="secondhand">Afegir a la Cistella</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Blusa gris del zara utlitzat .png" alt="Blusa gris del zara" class="product-image fit-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Blusa gris del zara</h3>
+                        <p class="product-price">€4.00</p>
+                        <button class="add-to-cart" data-id="s2" data-name="Blusa gris del zara" data-price="4" data-category="secondhand">Afegir a la Cistella</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2>Sobre nosaltres</h2>
+            <p>EcoTeen, una botiga de moda èticosostenible pensada especialment per a adolescents. Oferim roba nova de marques ètiques, peces úniques fetes al nostre taller amb materials reciclats, i una varietat de roba cuidada de segona mà. Tot això amb l'objectiu de fer que els nostres joves de la comarca, puguin tenir l'oportunitat de comprar-se roba amb estil, assequible i local, sense la necessitat de comprar tant per Internet o anar expressament a ciutats amb una varietat de botigues on totes són lluny de Puigcerdà. A Puigcerdà hi ha molt poca oferta per a joves, i encara menys si parlem de moda responsable. Per això, EcoTeen vol ser molt més que una botiga: volem conscienciar, crear comunitat i oferir alternatives reals per cuidar el planeta sense renunciar a la moda.</p>
+        </div>
+    </section>
+
+    <div id="size-modal" class="modal">
+        <div class="modal-content size-modal-content">
+            <span class="close">&times;</span>
+            <img id="size-modal-image" src="" alt="Producte" class="size-modal-image fit-image" style="margin-bottom:1rem;display:none;">
+            <h2>Selecciona la teva talla</h2>
+            <div class="size-options">
+                <button class="size-btn" data-size="XS">XS</button>
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+            </div>
+            <div class="size-guide">
+                <p>No estàs segur de la teva talla? <a href="#" class="size-guide-link">Guia de talles</a></p>
+            </div>
+            <button id="confirm-size" class="confirm-btn">Afegir a la cistella</button>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>La Teva Cistella</h2>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: €<span id="total-amount">0.00</span></p>
+                <div id="upsell-section" class="upsell-section">
+                    <!-- Upsell items will be dynamically added here -->
+                </div>
+                <button id="checkout-btn">Finalitzar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmation-toast" class="toast">
+        <p>Producte afegit a la cistella!</p>
+    </div>
+
+    <div id="size-guide-modal" class="modal">
+        <div class="modal-content size-guide-content">
+            <span class="close">&times;</span>
+            <h2>Guia de talles</h2>
+            <table class="size-table">
+                <thead>
+                    <tr><th>Talla</th><th>Pit (cm)</th><th>Cintura (cm)</th><th>Maluc (cm)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>XS</td><td>78-82</td><td>60-64</td><td>86-90</td></tr>
+                    <tr><td>S</td><td>82-86</td><td>64-68</td><td>90-94</td></tr>
+                    <tr><td>M</td><td>86-92</td><td>68-74</td><td>94-100</td></tr>
+                    <tr><td>L</td><td>92-98</td><td>74-80</td><td>100-106</td></tr>
+                    <tr><td>XL</td><td>98-104</td><td>80-86</td><td>106-112</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:1rem;">Aquesta guia és orientativa. Si tens dubtes, tria la talla més gran o consulta'ns!</p>
+        </div>
+    </div>
+
+    <div id="checkout-confirm-modal" class="modal">
+        <div class="modal-content checkout-confirm-content">
+            <span class="close">&times;</span>
+            <h2>Gràcies pel teu interès!</h2>
+            <p>Aviat obrirem una botiga física a:</p>
+            <div class="map-container" style="margin-bottom:1.5rem;">
+                <iframe src="https://www.google.com/maps?q=42.431497,1.927604&z=17&output=embed" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <form class="newsletter-form" autocomplete="off" onsubmit="return false;">
+                <h3>Vols rebre novetats? Apunta't al nostre butlletí!</h3>
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Correu electrònic" required>
+                <button type="submit">Subscriu-me</button>
+            </form>
+            <button id="back-to-cart" class="confirm-btn" style="margin-top:2rem;">Torna a la cistella</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EcoTeen. Tots els drets reservats.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
