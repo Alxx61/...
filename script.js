@@ -170,14 +170,26 @@ function showUpsellItems() {
             <h3 class="upsell-title">També et podria interessar...</h3>
             <div class="upsell-items">
                 ${upsellProducts.map(product => `
-                    <div class="upsell-item" onclick="addToCart('${product.id}', 'Sense talla', '${product.image}')">
+                    <div class="upsell-item" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
                         <img src="${product.image}" alt="${product.name}">
                         <div class="upsell-item-name">${product.name}</div>
                         <div class="upsell-item-price">€${product.price.toFixed(2)}</div>
+                        <button class="upsell-add-btn" data-id="${product.id}">Afegir a la cistella</button>
                     </div>
                 `).join('')}
             </div>
         `;
+        
+        // Add event listeners to upsell buttons
+        document.querySelectorAll('.upsell-add-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const id = this.getAttribute('data-id');
+                const item = document.querySelector(`.upsell-item[data-id="${id}"]`);
+                const image = item.getAttribute('data-image');
+                addToCart(id, 'Sense talla', image);
+            });
+        });
     } else {
         upsellSection.innerHTML = '';
     }
@@ -224,11 +236,29 @@ function showSizeModal(productId) {
 }
 
 function addToCart(productId, size, image) {
-    // Get product info from the button
+    // Get product info from the button or upsell data
     const button = document.querySelector(`.add-to-cart[data-id='${productId}']`);
-    const name = button.dataset.name;
-    const price = parseFloat(button.dataset.price);
-    const category = button.dataset.category;
+    let name, price, category;
+    
+    // Check if it's an upsell product (button won't exist)
+    if (!button) {
+        // Find the product in upsellProducts array
+        const upsellProduct = upsellProducts.find(p => p.id === productId);
+        if (upsellProduct) {
+            name = upsellProduct.name;
+            price = upsellProduct.price;
+            category = 'upsell';
+        } else {
+            console.error('Product not found:', productId);
+            return;
+        }
+    } else {
+        // Regular product, get data from button
+        name = button.dataset.name;
+        price = parseFloat(button.dataset.price);
+        category = button.dataset.category;
+    }
+    
     // Check if already in cart (same id and size)
     const existingItem = cart.find(item => item.id === productId && item.size === size);
     if (existingItem) {
@@ -286,10 +316,18 @@ function updateCart() {
     });
     // Update total amount
     totalAmount.textContent = total.toFixed(2);
+    
+    // Update upsell section if cart modal is visible
+    if (cartModal.style.display === 'block') {
+        showUpsellItems();
+    }
 }
 
 // Initialize the store
 document.addEventListener('DOMContentLoaded', () => {
     displayProducts();
     updateCart();
-}); 
+});
+
+// Make addToCart globally available for upsell buttons
+window.addToCart = addToCart; 

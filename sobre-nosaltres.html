@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosaltres | EcoTeen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: var(--background);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .back-home {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            align-self: flex-start;
+            margin-left: 2.5vw;
+            text-decoration: none;
+            color: var(--primary-green);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            border: 1.5px solid var(--primary-green);
+            border-radius: 6px;
+            padding: 0.3rem 1.1rem;
+            background: #eafaf1;
+            transition: background 0.2s, color 0.2s;
+            display: inline-block;
+        }
+        .back-home:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        .about-logo {
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .about-logo img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: #eafaf1;
+            border: 2px solid var(--primary-green);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .about-container {
+            max-width: 700px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem 2rem 2.2rem 2rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .about-container h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        .about-container p {
+            font-size: 1.15rem;
+            color: var(--text);
+            font-weight: 400;
+            line-height: 1.7;
+        }
+        @media (max-width: 600px) {
+            .about-container {
+                padding: 1.2rem 0.5rem 1.1rem 0.5rem;
+            }
+            .about-logo img {
+                width: 70px;
+                height: 70px;
+            }
+            .about-container h2 {
+                font-size: 1.3rem;
+            }
+            .about-container p {
+                font-size: 1rem;
+            }
+            .back-home {
+                margin-top: 1.2rem;
+                margin-left: 2vw;
+                font-size: 0.98rem;
+                padding: 0.2rem 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-home">&larr; Tornar a la botiga</a>
+    <div class="about-logo">
+        <img src="logo empresa ecoteen.png" alt="EcoTeen Logo">
+    </div>
+    <div class="about-container">
+        <h2>Sobre nosaltres</h2>
+        <p>EcoTeen, una botiga de moda èticosostenible pensada especialment per a adolescents. Oferim roba nova de marques ètiques, peces úniques fetes al nostre taller amb materials reciclats, i una varietat de roba cuidada de segona mà. Tot això amb l'objectiu de fer que els nostres joves de la comarca, puguin tenir l'oportunitat de comprar-se roba amb estil, assequible i local, sense la necessitat de comprar tant per Internet o anar expressament a ciutats amb una varietat de botigues on totes són lluny de Puigcerdà. A Puigcerdà hi ha molt poca oferta per a joves, i encara menys si parlem de moda responsable. Per això, EcoTeen vol ser molt més que una botiga: volem conscienciar, crear comunitat i oferir alternatives reals per cuidar el planeta sense renunciar a la moda.</p>
+    </div>
+</body>
+</html> 
